@@ -23,7 +23,7 @@ const retornaPersona = ({ nombre, edad, rango = "Capitán" }) => {
 
 // retornaPersona(persona);
 
-const myContext = ({ clave, nombre, edad, rango = "Capitán" }) => {
+const usContext = ({ clave, nombre, edad, rango = "Capitán" }) => {
   return {
     nombreClave: clave,
     anios: edad,
@@ -34,6 +34,6 @@ const myContext = ({ clave, nombre, edad, rango = "Capitán" }) => {
   };
 };
 
-const { nombreClave, anios, latlng:{lat,lng}} = myContext(persona);
+const { nombreClave, anios, latlng:{lat,lng}} = usContext(persona);
 
 console.log(nombreClave, anios, lat, lng);
